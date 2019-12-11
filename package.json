@@ -1,27 +1,29 @@
 {
-	"name": "tencent-wx-jssdk",
-	"version": "1.3.2-201807261207",
-	"description": "微信 JS-SDK",
-	"main": "index.js",
-	"types": "index.d.ts",
-	"scripts": {},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/taoqf/tencent-wx-jssdk.git"
-	},
-	"keywords": [
-		"wx",
-		"weixin",
-		"微信",
-		"公众号",
-		"jssdk",
-		"sdk",
-		"typescript"
-	],
-	"author": "taoqf",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/taoqf/tencent-wx-jssdk/issues"
-	},
-	"homepage": "https://github.com/taoqf/tencent-wx-jssdk#readme"
+  "name": "wechat-sdk-ts",
+  "version": "1.4.0-20191211",
+  "description": "Wechat JS-SDK Typescript",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allscanner/wechat-sdk-ts.git"
+  },
+  "keywords": [
+    "wx",
+    "weixin",
+    "微信",
+    "公众号",
+    "jssdk",
+    "sdk",
+    "typescript"
+  ],
+  "author": {
+    "name": "allscanner"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allscanner/wechat-sdk-ts/issues"
+  },
+  "homepage": "https://github.com/allscanner/wechat-sdk-ts.git"
 }

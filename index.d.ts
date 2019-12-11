@@ -65,20 +65,27 @@ declare namespace jWeixin {
 		'openProductSpecificView' |
 		'addCard' |
 		'chooseCard' |
-		'openCard';
+		'openCard' |
+		'openWXDeviceLib' |
+		'startScanWXDevice' |
+		'onScanWXDeviceResult' |
+		'configWXDeviceWiFi';
 
 	// 所有JS接口列表
 	type jsApiList = ApiMethod[];
 
-	// 通过config接口注入权限验证配置
-	function config(conf: {
-		debug?: boolean; // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	interface ConfigOptions {
+		beta ?: boolean;	// 开启内测接口调用，注入wx.invoke方法
+		debug ?: boolean; // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 		appId: string; // 必填，公众号的唯一标识
 		timestamp: number; // 必填，生成签名的时间戳
 		nonceStr: string; // 必填，生成签名的随机串
 		signature: string; // 必填，签名，见附录1
 		jsApiList: jsApiList; // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-	}): void;
+	}
+
+	// 通过config接口注入权限验证配置
+	function config(conf: ConfigOptions): void;
 	function ready(fn: () => void): void;
 	function error(fn: (err: { errMsg: string; }) => void): void;
 
@@ -575,12 +582,15 @@ declare namespace jWeixin {
 	interface WeixinJSBridge {
 		invoke(type: string, param: any, callback: (msg: { err_msg: string; }) => void): void;
 	}
+	interface WeixinJSBridge {
+		on(type: string, callback: (msg: { err_msg: string; }) => void): void;
+	}
 }
 
 // declare var wx = jWeixin;
 
 declare var WeixinJSBridge: jWeixin.WeixinJSBridge;
 
-declare module 'tencent-wx-jssdk' {
+declare module 'wechat-sdk-ts' {
 	export = jWeixin;
 }

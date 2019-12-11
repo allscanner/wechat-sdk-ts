@@ -1,14 +1,15 @@
-# tencent-wx-jssdk
+# wechat-sdk-ts
+
 Weixin [JS-SDK](https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115)
 
 ## SDK Version
 
-1.3.2
+1.4.0
 
 ## Install
 
 ```sh
-npm install tencent-wx-jssdk --save
+npm install wechat-sdk-ts --save
 ```
 
 ## How to Use
@@ -17,7 +18,7 @@ npm install tencent-wx-jssdk --save
 
 ```ts
 // sometime you want import this module, eg. use this with webpack
-import { scanQRCode } from 'tencent-wx-jssdk';
+import { scanQRCode } from 'wechat-sdk-ts';
 
 scanQRCode({
 	needResult: 0,
@@ -34,7 +35,7 @@ or, you could add this module in your tsconfig.json
 {
 	"compilerOptions": {
 		"types": [
-			"tencent-wx-jssdk"
+			"wechat-sdk-ts"
 		]
 	}
 }
@@ -62,7 +63,7 @@ WeixinJSBridge.invoke("getBrandWCPayRequest", {}, (res) => {
 **You will need this only if you would like get your project packed.**
 
 ```js
-const wx = require('tencent-wx-jssdk');
+const wx = require('wechat-sdk-ts');
 wx.scanQRCode({
 	needResult: 0,
 	scanType: ['qrCode'],
