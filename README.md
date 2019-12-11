@@ -12,6 +12,11 @@ Weixin [JS-SDK](https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp14211
 npm install wechat-sdk-ts --save
 ```
 
+### git install
+```sh
+npm install git+https://github.com/allscanner/wechat-sdk-ts.git --save
+```
+
 ## How to Use
 
 ### TypeScript
